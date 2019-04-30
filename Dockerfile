@@ -15,7 +15,7 @@ ENV BITBUCKET_VERSION  4.14.4
 # directory structure.
 
 # RUN executes command(s) in a new layer and creates a new image. E.g., it is often used for installing software packages.
-RUN set -x \
+#RUN set -x \
     && sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list \
     && apt-get update --quiet \
     && apt-get install --quiet --yes --no-install-recommends git-core xmlstarlet curl \
