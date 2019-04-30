@@ -2,7 +2,7 @@
 FROM inmbzp5170.in.dst.ibm.com:5000/ubuntu:69
 
 #One of the commands that can be set anywhere in the file - although it would be better if it was declared on top - is MAINTAINER. This non-executing command declares the author, hence setting the author field of the images. It should come nonetheless after FROM.
-MAINTAINER Ghanshyam<gsaini05@in.ibm.com>
+##MAINTAINER Ghanshyam<gsaini05@in.ibm.com>
 
 USER root
 
@@ -48,11 +48,11 @@ RUN set -x \
 # here we only ever run one process anyway.
 
 RUN useradd -d ${BITBUCKET_HOME} -u 1000 -m -s /bin/bash bitbucket
-ADD filebeat-6.2.1-linux-x86_64 /filebeat-6.2.1-linux-x86_64
-ADD node_exporter-0.15.2.linux-amd64 /opt/node_exporter-0.15.2.linux-amd64
+##ADD filebeat-6.2.1-linux-x86_64 /filebeat-6.2.1-linux-x86_64
+##ADD node_exporter-0.15.2.linux-amd64 /opt/node_exporter-0.15.2.linux-amd64
 RUN mv /opt/node_exporter-0.15.2.linux-amd64 /opt/node_exporter/
-ADD node_exporter.sh /opt/node_exporter/node_exporter.sh
-ADD node_exporter /etc/init.d/node_exporter
+##ADD node_exporter.sh /opt/node_exporter/node_exporter.sh
+##ADD node_exporter /etc/init.d/node_exporter
 
 # Expose default HTTP and SSH ports.
 #connector port 7990 is commented out in server.xml.So,it's not present in the output.
