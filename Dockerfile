@@ -75,7 +75,7 @@ WORKDIR /var/atlassian/bitbucket
 
 #ADD <src> <dest>
 #The ADD instruction will copy new files from <src> and add them to the container's filesystem at path <dest>.
-ADD /docker-entrypoint.sh /var/atlassian/bitbucket
+##ADD /docker-entrypoint.sh /var/atlassian/bitbucket
 
 RUN chmod +x /var/atlassian/bitbucket/docker-entrypoint.sh
 RUN chown -R bitbucket:bitbucket /var/atlassian/bitbucket/docker-entrypoint.sh
