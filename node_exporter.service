@@ -1,0 +1,9 @@
+# echo "[Unit]
+Description=Node Exporter
+
+[Service]
+User=selenium
+ExecStart=/home/selenium/node_exporter-0.14.0.linux-amd64/node_exporter
+
+[Install]
+WantedBy=default.target" > /etc/systemd/system/node_exporter.service
