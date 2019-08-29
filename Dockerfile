@@ -1,4 +1,4 @@
-#FROM gsai directive is probably the most crucial amongst all others for Dockerfiles. It defines the base image to use to start the build process. It can be any image, including the ones you have created previously.
+#FROM gsai_fe directive is probably the most crucial amongst all others for Dockerfiles. It defines the base image to use to start the build process. It can be any image, including the ones you have created previously.
 FROM inmbzp5170.in.dst.ibm.com:5000/ubuntu:69
 
 #One of the commands that can be set anywhere in the file - although it would be better if it was declared on top - is MAINTAINER. This non-executing command declares the author, hence setting the author field of the images. It should come nonetheless after FROM.
